@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" contenteditable="IE=edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <link rel="stylesheet" href="./projects.css">
+    <title>Projects</title>
+</head>
+
+<body>
+    <section class="project-header">
+        <nav> <h1 class="project-heading">3D Level Design Project</h1> </nav>
+        <hr class="rounded"/>
+
+        <div class="project-one">
+            <h3 class="project-one--name" id="project-name">Third Person Stealth</h3>
+            <h4 class="project-two__word-description" id="project-two__word--desc"></h4>
+            
+            <div class="project-synopsis--1">
+            <p class="project-synopsis">
+                This project was created to explore the aspects of 3D-level design with no real game as an end goal I 
+                had made a few games as a programmer before but for this, I focused from a designer's perspective. 
+                The question I asked myself was "What is needed from me so that the other disciplines can turn my 
+                prototype into a reality". The areas I identified that were most important were; whiteboxing, 2D sketches,
+                scripting, and lighting. At each iteration of the prototype, I asked myself whether enough existed to
+                convey a clear message of what I was trying to create.
+            </p>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-item-para carousel-item-para-1"><p>The view of the castle before entering.</p></div>
+                <div class="carousel-item-para carousel-item-para-2"><p>The Battlefield</p></div>
+                <div class="carousel-item-para carousel-item-para-3"><p>The last thing the player sees from the castle.</p></div>
+                <div class="carousel-item-para carousel-item-para-4"><p>View from Army's campsite.</p></div>
+                <div class="carousel-item-para carousel-item-para-5"><p>Used Unity's particle systems to guide the player.</p></div>
+    
+                <div class ="carousel-container">
+    
+                    <img class="carousel-item
+                    carousel-item-1" src="./assets/Screenshot (7).png" id= "1" data-index="1">
+    
+                    <img class="carousel-item
+                    carousel-item-2" src="./assets/Screenshot (8).png" id= "1" data-index="2">
+    
+                    <img class="carousel-item
+                    carousel-item-3" src="./assets/Screenshot (9).png" id= "1" data-index="3">
+    
+                    <img class="carousel-item
+                    carousel-item-4" src="./assets/Screenshot (13).png" id= "1" data-index="4">
+    
+                    <img class="carousel-item
+                    carousel-item-5" src="./assets/Screenshot (12).png" id= "1" data-index="5">
+    
+                </div>
+    
+                <div class="carousel-controls"></div>
+    
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </section>
+
+    <section id="other-sections" class="">
+            <h1 class="project-section">Theme</h1>
+            <div class="project__divider"> </div>
+            <p class = "project__description--para">
+                Before starting I needed a theme to work off of after brainstorming for a few "king" came to mind.
+                So I selected a medieval theme where you are a General in a war and your army is vastly
+                outnumber so you taken upon yourself to make your way behind enemy lines 
+                to the king's castle undetected.
+            </p>
+
+    </section>
+
+    
+    <section id="other-sections" class="">
+        <h1>Sketch</h1>
+        <div class="project__divider"> </div>
+        <p class = "project__description--para"> 
+            I started by sketching the primary engagement areas of my level
+            (Setup, Hook, Development Phases, Resolution). Each of these arcs 
+            elicits a different feeling from the player.
+            Going from the setup phase to the hook sets the tone and gives the player an idea of what is going on story-wise,
+            from the development to the turn the anticipation builds as the sight of the resolution nears.
+            
+            Once completed I started to fill in the gaps between these areas in my sketch by adding the appropriate 
+            spatial archetypes in them.
+        </p>
+
+        <div><p>Figure 1 - Inital sketch of the level.</p></div>
+        <figure class="project-figure-container">
+            <img class="project-figure" src="./assets/DJ_PaperLevel1024_1.PNG" alt="Alternate Text" />
+        </figure>
+</section>
+
+    </section>
+
+    <section id="other-sections" class="">
+        <h1>Whiteboxing</h1>
+        <div class="project__divider"> </div>
+        <p class = "project__description--para"> 
+            When my 2D sketch was complete it was time to translate that into a Unity project.
+            I used Unity's terrain tools to get my starting landscape; To sculpt mountains
+            I used the ProBuilder extension to build simple structures with the 3D shapes provided,
+            for more complex structures like the king's castle I made edits to simple shapes.
+        </p>
+
+        
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/8IISOm_lRQA">
+
+    </iframe>
+    </section>
+
+    <section id="other-sections" class="">
+        <h1>Scripting</h1>
+        <div class="project__divider"> </div>
+        <p class = "project__description--para"> 
+            There was minimal scripting done for this prototype, I scripted an AI to patrol a given
+            path. If the player was caught along the path they would respawn at the most recent checkpoint. 
+            Once the player was seen it wasn't an auto loss, 
+            they were given a few seconds to get out of the patrol's line of sight depicted by a cone of light.
+            I also programmed the opposing army to kill the player if they ventured too close to 
+            the battlefield along with some other movement scripts.
+            <br>
+            I scripted a cutscene system. Which activated when the player got near  
+            points of interest the player controller deactivated and the camera would pan to the point where they should be
+            looking. This is similar to the The Last of Us hint system. I also used these cutscene areas as checkpoints.
+        </p>
+
+        <div class="highlight-title"><p>Video 1 - Sentry AI Demo</p></div>
+        <div class="video-container">
+
+            <iframe src="https://www.youtube.com/embed/8IISOm_lRQA" type="video/mp4" class="project-video"
+            alt="Your browser does not support the video tag."> </iframe>
+
+        </div>
+    </section>
+
+    <section id="other-sections">
+        <h1>Lighting</h1>
+        <div class="project__divider"> </div>
+        <p class = "project__description--para">
+            The Lighting used in the level was added to accomplish two goals, guide the player and point out important
+            points of interest like the castle & secret entrances. I used Unity's particle system to create effects players would not miss and placed torches
+            along the main path so players would know if there on the right track.
+        </p>
+
+        <div><p>Figure 2 - Examples of Lighting used </p></div>
+        <figure class="project-figure-container">
+            <img class="project-figure" src="./assets/Screenshot (8).png" alt="Alternate Text" />
+
+            <img class="project-figure" src="./assets/Screenshot (15).png" alt="Alternate Text" />
+        </figure>
+    </section>
+
+    <footer>
+        <div class="footer__row">
+            <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+                <image src="./assets/up-arrow-svgrepo-com.svg" class="footer__logo--img"></image>
+            </figure>
+            <span class="footer__logo--popper">
+                Top
+            </span>
+            </a>
+
+            <div class="socials--list">
+                <a href="https://google.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">GitHub</a>
+
+                <a href="https://google.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">LinkedIn</a>
+
+                <a href="mailto:deante_dj@outlook.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">Email</a>
+
+                <a href="./assets/Resume.pdf" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">Resume</a>
+            </div>
+            
+            <div class = "footer__copyright">Copyright © 2023 Deante James</div>
+        </div>
+    </footer>
+</body>
+</html>
