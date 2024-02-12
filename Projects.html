@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" contenteditable="IE=edge" />
     <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
     <link rel="stylesheet" href="./projects.css">
+    <link href="./prism.css" rel="stylesheet" />
     <title>Projects</title>
 </head>
 
@@ -29,12 +30,16 @@
             </p>
             </div>
 
-            <div class="carousel">
+            <div class="carousel-descriptors">
+
                 <div class="carousel-item-para carousel-item-para-1"><p>The view of the castle before entering.</p></div>
                 <div class="carousel-item-para carousel-item-para-2"><p>The Battlefield</p></div>
                 <div class="carousel-item-para carousel-item-para-3"><p>The last thing the player sees from the castle.</p></div>
                 <div class="carousel-item-para carousel-item-para-4"><p>View from Army's campsite.</p></div>
                 <div class="carousel-item-para carousel-item-para-5"><p>Used Unity's particle systems to guide the player.</p></div>
+            </div>
+
+            <div class="carousel">
     
                 <div class ="carousel-container">
     
@@ -59,6 +64,7 @@
     
             </div>
             <script src="script.js"></script>
+            <script src="prism.js"></script>
         </div>
     </section>
 
@@ -89,10 +95,10 @@
             spatial archetypes in them.
         </p>
 
-        <div><p>Figure 1 - Inital sketch of the level.</p></div>
-        <figure class="project-figure-container">
-            <img class="project-figure" src="./assets/DJ_PaperLevel1024_1.PNG" alt="Alternate Text" />
-        </figure>
+        <div class="highlight-title"><p>Figure 1 - Inital sketch of the level.</p></div>
+        <div class="project-figure-container">
+            <img class="body-images" src="./assets/DJ_PaperLevel1024_1.PNG" alt="Alternate Text"/>
+        </div>
 </section>
 
     </section>
@@ -131,9 +137,34 @@
         <div class="video-container">
 
             <iframe src="https://www.youtube.com/embed/8IISOm_lRQA" type="video/mp4" class="project-video"
-            alt="Your browser does not support the video tag."> </iframe>
+            alt="Your browser does not support the video tag." allowfullscreen> </iframe>
 
         </div>
+
+        <div class="highlight-title"><p>
+            <strong>Code Snippet 1: </strong>
+            Below is the crux of my hint system a cinematic-like camera pan
+            </p></div>
+
+        <div class="code-container">
+            <pre><code class="lang-cpp match-braces rainbow-braces">
+private void CameraPan()
+{
+    // the light is my target
+    relPos = myLight.transform.position - mainCam.transform.position;
+
+    //  newly added
+    Vector3 camToPlayer = player.transform.position - mainCam.transform.position;
+
+    float deg = Vector3.Angle(relPos, camToPlayer);
+    float rotPerSecond = deg / durationOfTurn;
+
+    newRot = Quaternion.LookRotation(relPos);
+    mainCam.transform.rotation = Quaternion.RotateTowards(
+                                mainCam.transform.rotation, 
+                                newRot, rotPerSecond * Time.deltaTime);
+}
+</code></pre>
     </section>
 
     <section id="other-sections">
@@ -145,12 +176,12 @@
             along the main path so players would know if there on the right track.
         </p>
 
-        <div><p>Figure 2 - Examples of Lighting used </p></div>
-        <figure class="project-figure-container">
-            <img class="project-figure" src="./assets/Screenshot (8).png" alt="Alternate Text" />
+        <div class="highlight-title"><p>Figure 2,3 - Examples of Lighting used </p></div>
+        <div class="project-figure-container">
+            <img class="body-images" src="./assets/Screenshot (8).png" alt="Alternate Text" />
 
-            <img class="project-figure" src="./assets/Screenshot (15).png" alt="Alternate Text" />
-        </figure>
+            <img class="body-images" src="./assets/Screenshot (15).png" alt="Alternate Text" />
+        </div>
     </section>
 
     <footer>
