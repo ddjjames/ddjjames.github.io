@@ -468,6 +468,39 @@ footer {
     opacity: 1.0;
 }
 
+.educations{
+    width: 100%;
+    position: relative;
+    justify-content: left;
+}
+
+.Education--contents{
+    font-weight: 50px;
+}
+
+.grad-date
+{
+    color:#6030b1;
+}
+
+.education-headings
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+}
+
+.education-1
+{
+    padding: 25px 0;
+}
+
+.education-specfics
+{
+    padding-bottom: 4px;
+}
+
 /*small phone stuff
 when the width of the page is less than or equal to 768px do these things*/
 @media (max-width: 768px){
