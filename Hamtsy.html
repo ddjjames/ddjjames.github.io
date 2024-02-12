@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" contenteditable="IE=edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <link rel="stylesheet" href="./projects.css">
+    <link href="./prism.css" rel="stylesheet" />
+
+    <title>Projects</title>
+</head>
+
+<body>
+    <section class="project-header">
+        <nav> <h1 class="project-heading">Hamster Havoc</h1> </nav>
+        <hr class="rounded"/>
+
+        <div class="project-one">
+            <h3 class="project-one--name" id="project-name">2D Platformer</h3>
+            <h4 class="project-two__word-description" id="project-two__word--desc"></h4>
+            
+            <div class="project-synopsis--1">
+            <p class="project-synopsis">
+                Imagine a world where civilization has collapsed and the only hope for survival is a stash of sunflower seeds.
+                That’s the premise of <i>Hamster Havoc</i>, a 2D platformer inspired by the <i>Mad Max</i> 2015 video game.
+                In this game, you play as a furry hero who must brave the perils of the wasteland, from deadly traps to treacherous falls,
+                to reach your precious food. This project was my second at DigiPen, where I learned how to create tools for game development.
+                I also worked on implementing realistic game physics and collisions, making the gameplay more immersive and challenging.
+            </p>
+            </div>
+
+            <div class="carousel-descriptors">
+
+            <div class="carousel-item-para carousel-item-para-1"><p>Trailer of the finished game</p></div>
+            <div class="carousel-item-para carousel-item-para-2"><p>Rough first pass of the game</p></div>
+            <div class="carousel-item-para carousel-item-para-3"><p>Gameplay</p></div>
+            <div class="carousel-item-para carousel-item-para-4"><p>Gameplay</p></div>
+            <div class="carousel-item-para carousel-item-para-5"><p>Low health</p></div>
+            </div>
+
+            <div class="carousel">
+    
+                <div class ="carousel-container">
+    
+                    <img class="carousel-item
+                    carousel-item-1" src="./assets/HamsterHavocPic.png" id= "1" data-index="1">
+                    
+                    <img class="carousel-item
+                    carousel-item-2" src="./assets/InGameScreenshot.png" id= "1" data-index="2">
+
+                    <iframe src="https://youtube.com/embed/x9PfyBlW9-0" type="video/mp4" class="carousel-item
+                    carousel-item-3"
+                    alt="Your browser does not support the video tag." id= "1" data-index="3" allowFullScreen> </iframe>
+
+                    <iframe src="https://youtube.com/embed/rqXZDSqJKBE
+                    " type="video/mp4" class="carousel-item
+                    carousel-item-4"
+                    alt="Your browser does not support the video tag." id= "1" data-index="4" allowFullScreen> </iframe>
+
+
+                    <img class="carousel-item
+                    carousel-item-5" src="./assets/PlayatWork_week12_prj252_02.jpeg" id= "1" data-index="5">
+    
+                </div>
+    
+                <div class="carousel-controls"></div>
+    
+            </div>
+            <script src="script.js"></script>
+            <script src="./prism.js"></script>
+        </div>
+    </section>
+
+    <section id="other-sections" class="">
+            <h1 class="project-section">Tools</h1>
+            <div class="project__divider"> </div>
+            <p class = "project__description--para">
+
+                One of the most exciting aspects of this project was creating the serialization system of the engine.
+                This system allowed us to use Tiled, an open-source 2D level editor, to design and build our own levels.
+                Our art team provided us with a variety of tilesets, each containing different elements such as hazards, platforms, or background props.
+                The level designer could then mix and match these tilesets to craft a unique and engaging level.
+                After finishing the design, the level would be exported as a JSON file to a folder that the custom engine could access. 
+                I used the rapidJSON library to parse this file and extract the information necessary such as object scales, and position, and to recreate
+                the entire level in the engine.
+            </p>
+
+            <div><p>
+                Figure 1-3: Level in editor on left, the same level fully serialized 
+                in the game itself and the tileset used to make the level in the editor.
+            </p></div>
+            
+            <div class="project-figure-container">
+                <img class="body-images" src="./assets/ToolInAction - Copy.png" alt="Picture of Editor" />
+                <img class="body-images" src="./assets/ToolInAction - 1.png" alt="Picture in-game" />
+            </div>
+
+            <div class="project-figure-container">
+                <img class="body-images" src="./assets/TS_Floor06.png" alt="Tileset used for game" />
+            </div>
+    </section>
+
+    
+    <section id="other-sections" class="">
+        <h1>Physics</h1>
+        <div class="project__divider"> </div>
+        <p class = "project__description--para">
+        One of the most challenging and rewarding aspects of my work was developing the physics and collision system for our game.
+        I inherited a legacy codebase from the previous physics programmer, who left the team midway through the project.
+        I had to refactor and extend the system to meet the evolving needs of our game design.
+
+        Our game featured a dynamic and diverse environment, with different types of terrain tiles such as ramps.
+        These tiles could be rotated and placed in any orientation, creating complex and interesting scenarios.
+        However, the existing collision system was very basic and only supported box-box and circle-box collision.
+        This was not enough to handle the variety and richness of our game world.
+
+        To solve this problem, I implemented the Separated Axis Theorem, a powerful algorithm that can detect collisions between any convex polygons.
+        This allowed me to support any shape and size of terrain tiles, as well as other objects in the game.
+        The Separated Axis Theorem works by projecting the polygons onto different axes and checking for overlaps.
+        If there is no overlap on any axis, then there is no collision.
+
+        The Separated Axis Theorem can be applied to any number of axes,
+        as long as they are perpendicular to the edges of the polygons. This way, I was able to handle collisions between any convex polygons in our game.
+
+
+        </p>
+
+        <div><p>
+            <strong>Code Snippet 1: </strong>
+            Below is an excerpt from my implementation of SAT collision for a
+            polygon to polygon check.
+            </p></div>
+
+        <div class="code-container">
+        <pre><code class="lang-cpp match-braces rainbow-braces">
+    bool PolyPolyCollisionCheck(Collider* collider1, Collider* collider2)
+    {
+        // well have some sort of first pass that will not be
+        // too costly computationally
+
+        // vertices of both of the colliders
+        std::vector<glm::vec3> collider1Verts;
+        std::vector<glm::vec3> collider2Verts;
+
+        if (collider1->GetColliderType() == ColliderType::T_ColliderBox)
+        {
+            RectangleCollider* ret = dynamic_cast<RectangleCollider*>(collider1);
+            collider1Verts.resize(4);
+            collider1Verts = ret->getVertices();
+        }
+
+        if (collider2->GetColliderType() == ColliderType::T_ColliderBox)
+        {
+            RectangleCollider* ret = dynamic_cast<RectangleCollider*>(collider2);
+            collider2Verts.resize(4);
+            collider2Verts = ret->getVertices();
+        }
+
+        // check collider1 and 2 vertices 
+        // against all edge normals of collider1
+        // and collider2
+        glm::vec3 edgeNormal = { 0.0f, 0.0f, 0.0f };
+        for (int i = 0, j = 1; i < collider1Verts.size(); ++i, ++j)
+        {
+            // we have a box so don't do the other two edges
+            // its a waste of time
+            if (collider1Verts.size() == 4)
+            {
+                if (i == 2)
+                    break;
+            }
+
+            // don't want any subscript out of range exceptions
+            if (j == collider1Verts.size())
+                j = 0;
+
+            // finding the edge normals
+            edgeNormal.y = collider1Verts[j].x - collider1Verts[i].x;
+            edgeNormal.x = -(collider1Verts[j].y - collider1Verts[i].y);
+
+            // if it does not overlap on one axis we know the two polys
+            // can't be colliding
+            if (!CollidesOnAxis(edgeNormal, collider1Verts, collider2Verts))
+                return false;
+        }
+
+        // Now check for no overlaps on the edge normals of collider2
+        for (int i = 0, j = 1; i < collider2Verts.size(); ++i, ++j)
+        {
+            // we have a box so don't do the other two edges
+            // its a was of time
+            if (collider2Verts.size() == 4)
+            {
+                if (i == 2)
+                    break;
+            }
+
+            // don't want any subscript out of range exceptions
+            if (j == collider1Verts.size())
+                j = 0;
+
+            // finding the edge normal
+            edgeNormal.y = collider2Verts[j].x - collider2Verts[i].x;
+            edgeNormal.x = -(collider2Verts[j].y - collider2Verts[i].y);
+
+            // if it does not overlap on one axis we know the two polys
+            // can't be colliding
+            if (!CollidesOnAxis(edgeNormal, collider1Verts, collider2Verts))
+                return false;
+        }
+
+        // if we get to here without returning
+        // we know that the two colliders are overlapping
+        return true;
+    }
+        </code></pre>
+
+    </div>
+
+    <div><p>
+        <strong>Code Snippet 2: </strong>
+        A small excerpt from my implementation of how I handle resolution with the theorem.
+        </p></div>
+
+        <div class="code-container">
+            <pre><code class="lang-cpp match-braces rainbow-braces">
+void SATResolution(Object* obj1, Object* obj2, MTV& mtv)
+{
+    // getting very important information up here
+    Transform* trans2 = obj2->Has(Transform);
+    Physics* phy2 = obj2->Has(Physics);
+    CircleCollider* circle = dynamic_cast<CircleCollider*>(obj2->Has(Collider));
+    Physics* phyCircle = obj2->Has(Physics);
+
+    TriangleCollider* col1 =
+        dynamic_cast<TriangleCollider*>(obj1->Has(Collider));
+    std::vector<glm::vec3> verts = col1->getVertices();
+
+    glm::vec3 circlePos = trans2->GetTranslation();
+
+    // check to see if the circle is on two planes at the 
+    // same time if so perform a circle-circle check -> circle resolution and
+    // return for the rest of the time do line resolution.
+    glm::vec3 plane1(0.0f);
+    std::vector<glm::vec3> planes;
+    bool InPlanes = false;
+    {
+        // else we don't collide with any planes
+        // so just do line resolution
+        glm::vec3 edge;
+        edge.x = -(mtv.axis.y);
+        edge.y = mtv.axis.x;
+        edge.z = 0.0f;
+        glm::vec3 oldVel = phyCircle->GetVelocity();
+
+        glm::vec3 newVel = Projection2D(oldVel, edge);
+
+        phyCircle->SetVelocity(newVel);
+        trans2->SetTranslation(circlePos - (mtv.axis * (mtv.S)));
+
+        // hacky crap right here allows the player to jump when on ramps
+        // this stops the landing spam noise when on the ramp
+        // check the side if it has not been set already
+        if (!circle->CheckSide(Sides::BOTTOM))
+            circle->SetSide(Sides::BOTTOM);
+
+        // this stops the jump spam nosie when jumping going up a ramp
+        // this bool is checked in the behavior player if it is set do not
+        // play the jump sound under any circumstance
+        BehaviorPlayer* player = 
+                dynamic_cast<BehaviorPlayer*>(circle->GetParent()->Has(Behavior));
+
+        if ((newVel.x < 0.0f && newVel.y > 0.0f) || 
+            (newVel.x > 0.0f && newVel.y > 0.0f))
+        {
+            player->goingUpRamp = true;
+            return;
+        }
+
+        player->goingUpRamp = false;
+        return;
+    }
+}
+            </code></pre>
+</section>
+
+    </section>
+
+    <footer>
+        <div class="footer__row">
+            <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+                <image src="./assets/up-arrow-svgrepo-com.svg" class="footer__logo--img"></image>
+            </figure>
+            <span class="footer__logo--popper">
+                Top
+            </span>
+            </a>
+
+            <div class="socials--list">
+                <a href="https://google.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">GitHub</a>
+
+                <a href="https://google.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">LinkedIn</a>
+
+                <a href="mailto:deante_dj@outlook.com" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">Email</a>
+
+                <a href="./assets/Resume.pdf" class="footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white" target="_blank">Resume</a>
+            </div>
+            
+            <div class = "footer__copyright">Copyright © 2023 Deante James</div>
+        </div>
+        <div class="scroll-watcher"></div>
+    </footer>
+
+</body>
+</html>
