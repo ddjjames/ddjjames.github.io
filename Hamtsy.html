@@ -30,6 +30,15 @@
             </p>
             </div>
 
+            <div class="RapidFire-Bullet--list">
+                <h3>Technical highlights </h3>
+                <ul>
+                    <li>Level/Entity Serialization Pipeline</li>
+                    <li>Data Driven Scene Management System</li>
+                    <li>Separating Axis Theorem Collision Detection & Response</li>
+                </ul>
+            </div>
+
             <div class="carousel-descriptors">
 
             <div class="carousel-item-para carousel-item-para-1"><p>Trailer of the finished game</p></div>
@@ -86,8 +95,8 @@
                 the entire level in the engine.
             </p>
 
-            <div><p>
-                Figure 1-3: Level in editor on left, the same level fully serialized 
+            <div><p class="highlight-title">
+                <strong>Figure 1-3: </strong> Level in editor on left, the same level fully serialized 
                 in the game itself and the tileset used to make the level in the editor.
             </p></div>
             
@@ -133,7 +142,7 @@
             </p></div>
 
         <div class="code-container">
-        <pre><code class="lang-cpp match-braces rainbow-braces">
+        <pre><code class="lang-cpp match-braces rainbow-braces line-numbers">
     bool PolyPolyCollisionCheck(Collider* collider1, Collider* collider2)
     {
         // well have some sort of first pass that will not be
@@ -224,7 +233,7 @@
         </p></div>
 
         <div class="code-container">
-            <pre><code class="lang-cpp match-braces rainbow-braces">
+            <pre><code class="lang-cpp match-braces rainbow-braces line-numbers">
 void SATResolution(Object* obj1, Object* obj2, MTV& mtv)
 {
     // getting very important information up here

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./projects.css">
     <link href="./prism.css" rel="stylesheet" />
 
+    <script src="https://kit.fontawesome.com/438c0c6bbb.js" crossorigin="anonymous"></script>
+
     <title>Projects</title>
 </head>
 
 <body>
     <section class="project-header">
-        <nav> <h1 class="project-heading">Project Atlantis 
-            (CURRENTLY UNDER CONSTRUCTION You can find more on this project on my LinkedIn Page)
+        <nav> <h1 class="project-heading">Project Atlantis
         </h1> </nav>
         <hr class="rounded"/>
 
@@ -25,22 +26,37 @@
             <div class="project-synopsis--1">
             <p class="project-synopsis">
                 Dive into the depths of adventure with this mesmerizing 3D puzzle game.
-                As an experienced diver, you’ve been dispatched to explore the mystifying ruins of an ancient underwater civilization.
-                But beware—the secrets lurking beneath the waves are far more profound than you could ever imagine.
+                As an experienced diver, you’ve been dispatched by a Private Company (Pacifica)
+                to explore the mystifying ruins of an ancient underwater civilization.
+                Funded by Pacifica you come equipped with the latest technology
+                a digital codex and aqua vac your specimen collection tool,
+                You set out to explore the secrets lurking beneath the waves
+                but you soon learn that the secrets the depths hold are more profound
+                than you could have ever anticipated.
 
                 Collaborating seamlessly with other disciplines, I crafted innovative tools and streamlined workflows.
                 I also delved into gameplay programming, in order to elevate the player experience.
-                Brace yourself for a journey where mystery meets mastery, and the ocean conceals more than it reveals. 🌊
+                Brace yourself for a journey where mystery meets mastery, and the ocean conceals more than it reveals.
             </p>
             </div>
 
-            <div class="carousel-descriptors">
+            <div class="RapidFire-Bullet--list">
+                <h3>Technical highlights </h3>
+                <ul>
+                    <li>Game Optimization</li>
+                    <li>Inventory/Fish Collection System</li>
+                    <li>Visual Effects</li>
+                    <li>Dynamic Environments</li>
+                </ul>
+            </div>
 
+
+            <div class="carousel-descriptors">
             <div class="carousel-item-para carousel-item-para-1"><p>Trailer of the finished game</p></div>
-            <div class="carousel-item-para carousel-item-para-2"><p>Rough first pass of the game</p></div>
-            <div class="carousel-item-para carousel-item-para-3"><p>Gameplay</p></div>
-            <div class="carousel-item-para carousel-item-para-4"><p>Gameplay</p></div>
-            <div class="carousel-item-para carousel-item-para-5"><p>Low health</p></div>
+            <div class="carousel-item-para carousel-item-para-2"><p></p></div>
+            <div class="carousel-item-para carousel-item-para-3"><p></p></div>
+            <div class="carousel-item-para carousel-item-para-4"><p></p></div>
+            <div class="carousel-item-para carousel-item-para-5"><p></p></div>
             </div>
 
             <div class="carousel">
@@ -48,23 +64,20 @@
                 <div class ="carousel-container">
     
                     <img class="carousel-item
-                    carousel-item-1" src="./assets/" id= "1" data-index="1">
+                    carousel-item-1" src="./assets/FA22_PRJ402_ASchneuwly_Rebecca_Joines_Temple01.png" id= "1" data-index="1">
                     
                     <img class="carousel-item
-                    carousel-item-2" src="./assets/" id= "1" data-index="2">
+                    carousel-item-2" src="./assets/FA22_PRJ402_ASchneuwly_Rebecca_Joines_HUB03.png" id= "1" data-index="2">
 
                     <iframe src="https://youtube.com/embed/X0hI63XrdSo" type="video/mp4" class="carousel-item
                     carousel-item-3"
-                    alt="Your browser does not support the video tag." id= "1" data-index="3" allowFullScreen> </iframe>
-
-                    <iframe src="https://youtube.com/embed/rqXZDSqJKBE
-                    " type="video/mp4" class="carousel-item
-                    carousel-item-4"
-                    alt="Your browser does not support the video tag." id= "1" data-index="4" allowFullScreen> </iframe>
-
+                    alt="Project Atlantis Trailer" id= "1" data-index="3" allowFullScreen> </iframe>
 
                     <img class="carousel-item
-                    carousel-item-5" src="./assets/" id= "1" data-index="5">
+                    carousel-item-4" src="./assets/projAtlantis1.png" id= "1" data-index="4">
+
+                    <img class="carousel-item
+                    carousel-item-5" src="./assets/projAtlantis.png" id= "1" data-index="5">
     
                 </div>
     
@@ -81,212 +94,63 @@
             <div class="project__divider"> </div>
             <p class = "project__description--para">
 
-                One of the most exciting aspects of this project was creating the serialization system of the engine.
-                This system allowed us to use Tiled, an open-source 2D level editor, to design and build our own levels.
-                Our art team provided us with a variety of tilesets, each containing different elements such as hazards, platforms, or background props.
-                The level designer could then mix and match these tilesets to craft a unique and engaging level.
-                After finishing the design, the level would be exported as a JSON file to a folder that the custom engine could access. 
-                I used the rapidJSON library to parse this file and extract the information necessary such as object scales, and position, and to recreate
-                the entire level in the engine.
+                In this project, I tackled a major challenge that the artist on the team faced: 
+                painting multiple materials onto a landscape efficiently in Unreal.
+                I created a custom landscape material that could accept multiple material inputs and alpha blend them.
+                This enabled the artist to quickly iterate and create stunning environments with different textures and colors.
+                The tool I developed was user-friendly and efficient, as it integrated with Unreal's built-in landscape paint tool 
+                and enabled quick switching between predefined materials.
+                This tool showcases my skills in creating tools and workflows that enhance the artistic vision and productivity of the team.
+
             </p>
 
-            <div><p>
-                Figure 1-3: Level in editor on left, the same level fully serialized 
-                in the game itself and the tileset used to make the level in the editor.
+            <div class="highlight-title"><p>
+                Figure 1-2: Applying an algae layer to an already painted sand mound in game.
             </p></div>
             
             <div class="project-figure-container">
-                <img class="body-images" src="./assets/" alt="Picture of Editor" />
-                <img class="body-images" src="./assets/" alt="Picture in-game" />
+                <img class="body-images" src="./assets/PoseidonLandscapePainter1.png" alt="Picture of landscape paint tool" />
+                <img class="body-images" src="./assets/PoseidonLandscapePainter2.png" alt="Picture of landscape paint tool" />
             </div>
 
             <div class="project-figure-container">
-                <img class="body-images" src="./assets/" alt="Tileset used for game" />
+                <!-- <img class="body-images" src="./assets/MaterialSnippet.PNG" alt="Backend Blueprint code for tool" /> -->
             </div>
     </section>
 
     
     <section id="other-sections" class="">
-        <h1>Physics</h1>
+        <h1>Visual Effects</h1>
         <div class="project__divider"> </div>
-        <p class = "project__description--para">
-        One of the most challenging and rewarding aspects of my work was developing the physics and collision system for our game.
-        I inherited a legacy codebase from the previous physics programmer, who left the team midway through the project.
-        I had to refactor and extend the system to meet the evolving needs of our game design.
-
-        Our game featured a dynamic and diverse environment, with different types of terrain tiles such as ramps.
-        These tiles could be rotated and placed in any orientation, creating complex and interesting scenarios.
-        However, the existing collision system was very basic and only supported box-box and circle-box collision.
-        This was not enough to handle the variety and richness of our game world.
-
-        To solve this problem, I implemented the Separated Axis Theorem, a powerful algorithm that can detect collisions between any convex polygons.
-        This allowed me to support any shape and size of terrain tiles, as well as other objects in the game.
-        The Separated Axis Theorem works by projecting the polygons onto different axes and checking for overlaps.
-        If there is no overlap on any axis, then there is no collision.
-
-        The Separated Axis Theorem can be applied to any number of axes,
-        as long as they are perpendicular to the edges of the polygons. This way, I was able to handle collisions between any convex polygons in our game.
-
-
+        <p class = "project__description--para">        
+        In this project, I worked closely with the team's visual effects artist to create stunning underwater effects.
+        I acted as their Unreal expert and helped them with the technical aspects of their VFX.
+        <br>
+        <br>
+        I also improved the player feedback and immersion by using Runtime Virtual Textures, a feature that allows for dynamic texel data generation onto landscapes.
+        Once this data was fed into a landscape material it would allow me to distort within the parameters of the provided texture.
+        Custom textures could be used to define the look and size of the trail left by the player when swimming over the sea floor or suctioning with the aqua vac.
+        If you would like more info on the implementation of this system you can download my write-up below.
         </p>
 
-        <div><p>
-            <strong>Code Snippet 1: </strong>
-            Below is an excerpt from my implementation of SAT collision for a
-            polygon to polygon check.
-            </p></div>
+        <a href="./assets/Deante_James_LandscapeDeformationArchitecture.pdf" class="footer__anchor1">
+            <figure class="footer__logo">
+                <i class="fa-solid fa-file-pdf" class="footer__logo--img" style="color: #471cb3; font-size: 1.5em"></i>
+            </figure>
+            <span class="footer__logo--popper1">
+                landscape Deformation Doc
+            </span>
+            </a>
 
-        <div class="code-container">
-        <pre><code class="lang-cpp match-braces rainbow-braces">
-    bool PolyPolyCollisionCheck(Collider* collider1, Collider* collider2)
-    {
-        // well have some sort of first pass that will not be
-        // too costly computationally
+        <div class="highlight-title"><p>Video 1 - Underwater Rock Explosion</p></div>
+        <div class="project-figure-container">
+            <img class="body-images" src="./assets/DestructFinal.gif" alt="Picture of landscape paint tool" />
+        </div>
 
-        // vertices of both of the colliders
-        std::vector<glm::vec3> collider1Verts;
-        std::vector<glm::vec3> collider2Verts;
-
-        if (collider1->GetColliderType() == ColliderType::T_ColliderBox)
-        {
-            RectangleCollider* ret = dynamic_cast<RectangleCollider*>(collider1);
-            collider1Verts.resize(4);
-            collider1Verts = ret->getVertices();
-        }
-
-        if (collider2->GetColliderType() == ColliderType::T_ColliderBox)
-        {
-            RectangleCollider* ret = dynamic_cast<RectangleCollider*>(collider2);
-            collider2Verts.resize(4);
-            collider2Verts = ret->getVertices();
-        }
-
-        // check collider1 and 2 vertices 
-        // against all edge normals of collider1
-        // and collider2
-        glm::vec3 edgeNormal = { 0.0f, 0.0f, 0.0f };
-        for (int i = 0, j = 1; i < collider1Verts.size(); ++i, ++j)
-        {
-            // we have a box so don't do the other two edges
-            // its a waste of time
-            if (collider1Verts.size() == 4)
-            {
-                if (i == 2)
-                    break;
-            }
-
-            // don't want any subscript out of range exceptions
-            if (j == collider1Verts.size())
-                j = 0;
-
-            // finding the edge normals
-            edgeNormal.y = collider1Verts[j].x - collider1Verts[i].x;
-            edgeNormal.x = -(collider1Verts[j].y - collider1Verts[i].y);
-
-            // if it does not overlap on one axis we know the two polys
-            // can't be colliding
-            if (!CollidesOnAxis(edgeNormal, collider1Verts, collider2Verts))
-                return false;
-        }
-
-        // Now check for no overlaps on the edge normals of collider2
-        for (int i = 0, j = 1; i < collider2Verts.size(); ++i, ++j)
-        {
-            // we have a box so don't do the other two edges
-            // its a was of time
-            if (collider2Verts.size() == 4)
-            {
-                if (i == 2)
-                    break;
-            }
-
-            // don't want any subscript out of range exceptions
-            if (j == collider1Verts.size())
-                j = 0;
-
-            // finding the edge normal
-            edgeNormal.y = collider2Verts[j].x - collider2Verts[i].x;
-            edgeNormal.x = -(collider2Verts[j].y - collider2Verts[i].y);
-
-            // if it does not overlap on one axis we know the two polys
-            // can't be colliding
-            if (!CollidesOnAxis(edgeNormal, collider1Verts, collider2Verts))
-                return false;
-        }
-
-        // if we get to here without returning
-        // we know that the two colliders are overlapping
-        return true;
-    }
-        </code></pre>
-
-    </div>
-
-    <div><p>
-        <strong>Code Snippet 2: </strong>
-        A small excerpt from my implementation of how I handle resolution with the theorem.
-        </p></div>
-
-        <div class="code-container">
-            <pre><code class="lang-cpp match-braces rainbow-braces">
-void SATResolution(Object* obj1, Object* obj2, MTV& mtv)
-{
-    // getting very important information up here
-    Transform* trans2 = obj2->Has(Transform);
-    Physics* phy2 = obj2->Has(Physics);
-    CircleCollider* circle = dynamic_cast<CircleCollider*>(obj2->Has(Collider));
-    Physics* phyCircle = obj2->Has(Physics);
-
-    TriangleCollider* col1 =
-        dynamic_cast<TriangleCollider*>(obj1->Has(Collider));
-    std::vector<glm::vec3> verts = col1->getVertices();
-
-    glm::vec3 circlePos = trans2->GetTranslation();
-
-    // check to see if the circle is on two planes at the 
-    // same time if so perform a circle-circle check -> circle resolution and
-    // return for the rest of the time do line resolution.
-    glm::vec3 plane1(0.0f);
-    std::vector<glm::vec3> planes;
-    bool InPlanes = false;
-    {
-        // else we don't collide with any planes
-        // so just do line resolution
-        glm::vec3 edge;
-        edge.x = -(mtv.axis.y);
-        edge.y = mtv.axis.x;
-        edge.z = 0.0f;
-        glm::vec3 oldVel = phyCircle->GetVelocity();
-
-        glm::vec3 newVel = Projection2D(oldVel, edge);
-
-        phyCircle->SetVelocity(newVel);
-        trans2->SetTranslation(circlePos - (mtv.axis * (mtv.S)));
-
-        // hacky crap right here allows the player to jump when on ramps
-        // this stops the landing spam noise when on the ramp
-        // check the side if it has not been set already
-        if (!circle->CheckSide(Sides::BOTTOM))
-            circle->SetSide(Sides::BOTTOM);
-
-        // this stops the jump spam nosie when jumping going up a ramp
-        // this bool is checked in the behavior player if it is set do not
-        // play the jump sound under any circumstance
-        BehaviorPlayer* player = 
-                dynamic_cast<BehaviorPlayer*>(circle->GetParent()->Has(Behavior));
-
-        if ((newVel.x < 0.0f && newVel.y > 0.0f) || 
-            (newVel.x > 0.0f && newVel.y > 0.0f))
-        {
-            player->goingUpRamp = true;
-            return;
-        }
-
-        player->goingUpRamp = false;
-        return;
-    }
-}
-            </code></pre>
+        <div class="highlight-title"><p>Figure 3 - Deformity Made by diver</p></div>
+        <div class="project-figure-container">
+            <img class="body-images" src="./assets/Screenshot (29).png" alt="Picture of landscape paint tool" />
+        </div>
 </section>
 
     </section>

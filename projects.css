@@ -302,12 +302,36 @@ footer {
     transition: all 300ms ease;
 }
 
+.footer__logo--popper1{
+    position: absolute;
+    right: 0;
+    top: 6px;
+    left: 20px;
+    font-weight: 700;
+    opacity: 0;
+    color: #6030b1;
+    line-height: 40.25px;
+    transition: all 300ms ease;
+    white-space:nowrap;
+}
+
 .footer__anchor{
     margin-bottom: 10px;
     position: relative;
 }
 
-.footer__anchor:hover .footer__logo--popper{
+.footer__anchor1{
+    margin-right: 98%;
+}
+
+.footer__anchor:hover .footer__logo--popper
+{
+    transform: translateX(60px);
+    opacity: 1.0;
+}
+
+.footer__anchor1:hover .footer__logo--popper1
+{
     transform: translateX(60px);
     opacity: 1.0;
 }
@@ -539,6 +563,7 @@ a
     animation-timeline: view();
     animation-range: normal entry;
 }
+
 
 .video-container{
     display: flex;
