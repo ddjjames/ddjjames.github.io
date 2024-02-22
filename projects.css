@@ -194,7 +194,6 @@ viewpoert width this unit is responsive*/
 
 .code-container
 {
-    object-fit: contain;
     width: fit-content;
 
     animation: fade-in-image linear forwards;
@@ -363,7 +362,7 @@ a
 
 .carousel
 {
-    width: 100%;
+    width: 98%;
 }
 
 .carousel-container
@@ -388,7 +387,7 @@ a
 }
 
 .carousel-item-1{
-    left: 15%;
+    left: 25%;
     opacity: .4;
     transform: translateX(-50%);
 }
@@ -428,7 +427,7 @@ a
 }
 
 .carousel-item-5{
-    left: 85%;
+    left: 75%;
     opacity: .4;
     transform: translateX(-50%);
 }
@@ -626,17 +625,21 @@ a
 {
     width: 100%;
 }
+
+.code-container
+{
+    width: fit-content;
+    font-size: 0.75em;
 }
 
-@media (max-width: 480px)
-{
-    .project-video{
-        height: 40vh;
-    }
+}
 
+/*Shrink the code container and carousel to stop the overflow off the page*/
+@media (max-width: 590px)
+{
     .carousel
     {
-        max-width: 18%;
+        max-width: 10%;
     }
 
     .carousel-item-3
@@ -645,13 +648,44 @@ a
        height: 240px;
     }
 
+    .code-container
+    {
+        width: fit-content;
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .project-video{
+        height: 40vh;
+    }
+
     .body-images{
         width: 100%;
         }
 
-.project-figure-container
-{
-    flex-wrap: wrap;
-    height: 450px;
+    .project-figure-container
+    {
+        flex-wrap: wrap;
+        height: 450px;
+    }
 }
+
+/*For Iphone XRs*/
+@media (max-width: 435px)
+{
+    .carousel-item{
+        width: 365px;
+    }
+
+    .carousel-controls button{
+        padding: 0 0px;
+    }
+
+        .code-container
+    {
+        width: fit-content;
+        font-size: 0.5em;
+    }
 }
