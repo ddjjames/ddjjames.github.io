@@ -238,58 +238,21 @@ void SATResolution(Object* obj1, Object* obj2, MTV& mtv)
 {
     // getting very important information up here
     Transform* trans2 = obj2->Has(Transform);
-    Physics* phy2 = obj2->Has(Physics);
-    CircleCollider* circle = dynamic_cast<CircleCollider*>(obj2->Has(Collider));
     Physics* phyCircle = obj2->Has(Physics);
-
-    TriangleCollider* col1 =
-        dynamic_cast<TriangleCollider*>(obj1->Has(Collider));
-    std::vector<glm::vec3> verts = col1->getVertices();
 
     glm::vec3 circlePos = trans2->GetTranslation();
 
-    // check to see if the circle is on two planes at the 
-    // same time if so perform a circle-circle check -> circle resolution and
-    // return for the rest of the time do line resolution.
-    glm::vec3 plane1(0.0f);
-    std::vector<glm::vec3> planes;
-    bool InPlanes = false;
-    {
-        // else we don't collide with any planes
-        // so just do line resolution
-        glm::vec3 edge;
-        edge.x = -(mtv.axis.y);
-        edge.y = mtv.axis.x;
-        edge.z = 0.0f;
-        glm::vec3 oldVel = phyCircle->GetVelocity();
+    // so just do line resolution
+    glm::vec3 edge;
+    edge.x = -(mtv.axis.y);
+    edge.y = mtv.axis.x;
+    edge.z = 0.0f;
+    glm::vec3 oldVel = phyCircle->GetVelocity();
 
-        glm::vec3 newVel = Projection2D(oldVel, edge);
+    glm::vec3 newVel = Projection2D(oldVel, edge);
 
-        phyCircle->SetVelocity(newVel);
-        trans2->SetTranslation(circlePos - (mtv.axis * (mtv.S)));
-
-        // hacky crap right here allows the player to jump when on ramps
-        // this stops the landing spam noise when on the ramp
-        // check the side if it has not been set already
-        if (!circle->CheckSide(Sides::BOTTOM))
-            circle->SetSide(Sides::BOTTOM);
-
-        // this stops the jump spam nosie when jumping going up a ramp
-        // this bool is checked in the behavior player if it is set do not
-        // play the jump sound under any circumstance
-        BehaviorPlayer* player = 
-                dynamic_cast<BehaviorPlayer*>(circle->GetParent()->Has(Behavior));
-
-        if ((newVel.x < 0.0f && newVel.y > 0.0f) || 
-            (newVel.x > 0.0f && newVel.y > 0.0f))
-        {
-            player->goingUpRamp = true;
-            return;
-        }
-
-        player->goingUpRamp = false;
-        return;
-    }
+    phyCircle->SetVelocity(newVel);
+    trans2->SetTranslation(circlePos - (mtv.axis * (mtv.S)));
 }
             </code></pre>
 </section>
